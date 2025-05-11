@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Практична робота №4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_pr4.css">
+</head>
+<body>
+
+    <h1 id="zagolovok_golovniy">Інтерактивні елементи на сторінці</h1>
+
+    <div class="modalka-konteiner">
+      <button id="vidkrytyModalku">Відкрити модальне вікно</button>
+
+      <div id="myModal" class="modalka">
+        <div class="modalka-zmist">
+          <span class="zakryty">&times;</span>
+          <h2>Це модальне вікно</h2>
+          <p>Привіт! Це приклад модального вікна.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="forma-zvorotnogo-zv'yazku" id="forma_kontakt">
+      <h2>Форма зворотного зв'язку</h2>
+      <form id="kontaktForma">
+        <label for="imyaPolya">Ваше ім'я:</label><br>
+        <input type="text" id="imyaPolya" name="imya" required><br><br>
+
+        <label for="emailPolya">Ваш Email:</label><br>
+        <input type="email" id="emailPolya" name="email" required><br><br>
+
+        <label for="povidomlennyaPolya">Повідомлення:</label><br>
+        <textarea id="povidomlennyaPolya" name="povidomlennya" rows="4" required></textarea><br><br>
+
+        <button type="submit" id="vidpravytyKnopka">Відправити</button>
+      </form>
+    </div>
+
+    <div class="galereya-kartynok" id="galereya">
+      <h2>Галерея зображень</h2>
+      <img src="https://via.placeholder.com/150?text=Картинка+1" alt="Картинка 1" class="kartynka-galereyi">
+      <img src="https://via.placeholder.com/150?text=Картинка+2" alt="Картинка 2" class="kartynka-galereyi">
+      <img src="https://via.placeholder.com/150?text=Картинка+3" alt="Картинка 3" class="kartynka-galereyi">
+    </div>
+
+    <div class="vypadayuche-menyu">
+      <h2>Випадаюче меню</h2>
+      <button class="knopka-menyu" id="menyuKnopka">Меню</button>
+      <div class="zmist-menyu" id="vypadMenyu">
+        <a href="#">Посилання 1</a>
+        <a href="#">Посилання 2</a>
+        <a href="#">Посилання 3</a>
+      </div>
+    </div>
+
+    <button id="knopka_vgoru" class="knopka-vgoru" title="Вгору">^</button>
+
+    <footer id="pidpis">
+      <p>Зроблено з кавою :)</p>
+    </footer>
+
+    <script src="script_lab4.js"></script>
+</body>
+</html> 
