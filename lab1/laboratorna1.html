@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №1 - Семантична структура веб-сторінки">
+    <meta name="keywords" content="HTML, семантика, веб-розробка, лабораторна">
+    <title>Лабораторна робота №1</title>
+    <link rel="stylesheet" href="lab_style1.css">
+</head>
+<body>
+
+    <header class="shapka_saitu" id="pageHeader">
+        <div class="logo_container">
+            <img src="https://via.placeholder.com/150x50?text=Логотип" alt="Логотип Сайту" id="logo_img">
+        </div>
+        <nav class="navigatsiya_golovna" aria-label="Головна навігація">
+            <ul class="spysok_nav">
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#news">Новини</a></li>
+                <li><a href="#articles_sec">Статті</a></li>
+                <li><a href="#about_us">Про нас</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="osnovnyi_zmist" class="main_content_wrapper">
+        
+        <section id="articles_sec" aria-labelledby="articles_heading">
+            <h1 id="articles_heading" class="visually_hidden" style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Основні статті</h1> 
+
+            <article class="stattya_blok">
+                <h2>Цікава стаття про веб-технології</h2>
+                <p>Перший абзац тексту цієї статті. Розповідається про важливість <mark>семантичної розмітки</mark> для сучасних веб-сайтів.</p>
+                <p>Другий абзац продовжує тему і розкриває деякі <time datetime="2025-05-10">10 травня 2025</time> оновлення стандартів.</p>
+                <details class="detali_stattyi">
+                    <summary>Дізнатися більше про HTML5</summary>
+                    <p>HTML5 приніс багато нових тегів, які допомагають краще структурувати контент.</p>
+                </details>
+            </article>
+
+            <article class="stattya_blok" id="druga_stattya">
+                <h2>Інша важлива тема: Доступність</h2>
+                <p>Доступність веб-сайтів (a11y) є критично важливою. <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> надає рекомендації.</p>
+                <figure class="kartynka_v_stattyi">
+                    <img src="https://via.placeholder.com/400x200?text=Ілюстрація+до+статті" alt="Абстрактна ілюстрація про доступність" >
+                    <figcaption>Рис. 1. Важливість доступності в сучасному світі.</figcaption>
+                </figure>
+                <blockquote>
+                  <p>"Найкращий спосіб зробити сайти доступними - це думати про доступність з самого початку."</p>
+                  <cite>- Відомий розробник</cite>
+                </blockquote>
+            </article>
+        </section>
+
+        <aside class="bichna_panel" id="sidebar_info">
+            <h3>Пошук по сайту</h3>
+            <form role="search" class="forma_poshuku">
+                <label for="searchInput" class="visually_hidden" style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Пошуковий запит</label>
+                <input type="search" id="searchInput" name="searchQuery" placeholder="Що шукаємо?">
+                <button type="submit">Знайти</button>
+            </form>
+
+            <div class="vidzhet_social media">
+                <h4>Ми в соцмережах</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Telegram</a></li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="pidval_saitu" id="page_footer">
+        <div class="kontaktna_informatsiya">
+            <h4>Контакти</h4>
+            <address>
+                м. Київ, вул. Веб-Розробників, 1<br>
+                <a href="mailto:info@gmail.com">info.com</a><br>
+                <a href="tel:+380881122334">+38 (088) 112-23-34</a>
+            </address>
+        </div >
+        <div class="kopirayt">
+            <p>&copy; 2025 Копірайт. <small>Всі права захищено.</small></p>
+        </div>
+</body>
+</html>
