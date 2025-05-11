@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №3</title>
+    <link rel="stylesheet" href="flex_layout.css">
+</head>
+<body>
+
+    <header class="shapka_saytu">
+        <div class="logo_misce">
+            <img src="https://via.placeholder.com/120x50?text=Логотип" alt="Логотип сайту" id="logoFlex">
+        </div>
+        <nav class="navigaciya_verkh">
+            <ul class="spysok_navigaciyi">
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Товари</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="golovnyi_konteiner_flex">
+        <main class="osnovnyi_zmist_flex" id="mainContent">
+            <h1>Основний контент сторінки</h1>
+            <p>Тут знаходиться головна інформація статті або розділу.</p>
+            <p>Використовуємо flexbox для створення гнучкого макету.</p>
+            
+            <section class="sekciya_kartok">
+                <h2>Картки товарів/послуг</h2>
+                <div class="konteiner_kartok">
+                    <div class="kartka" id="kartka1">
+                        <h3>Товар 1</h3>
+                        <p>Опис товару або послуги.</p>
+                    </div>
+                    <div class="kartka" id="kartka2">
+                        <h3>Товар 2</h3>
+                        <p>Короткий опис.</p>
+                    </div>
+                    <div class="kartka" id="kartka3">
+                        <h3>Товар 3</h3>
+                        <p>Детальніше про пропозицію.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <aside class="bichna_panel_flex" id="sidebarFlex">
+            <h3>Бічна панель</h3>
+            <ul>
+                <li>Додаткова інформація</li>
+                <li>Рекламний блок</li>
+                <li>Посилання</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="pidval_saytu_flex" id="footerFlex">
+        <div class="kolonka_pidvalu" id="kolonka1">
+            <h4>Колонка 1</h4>
+            <p>Інформація футера.</p>
+        </div>
+        <div class="kolonka_pidvalu" id="kolonka2">
+            <h4>Колонка 2</h4>
+            <p>Ще інформація.</p>
+        </div>
+        <div class="kolonka_pidvalu" id="kolonka3">
+            <h4>Колонка 3</h4>
+            <p>Контакти тощо.</p>
+        </div >
+
+    <p>Зроблено з кавою :)</p>
+
+    </footer>
+
+</body>
+</html> 
