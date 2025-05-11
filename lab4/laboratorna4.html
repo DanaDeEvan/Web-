@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4</title>
+    <link rel="stylesheet" href="dynamic_menu.css">
+</head>
+<body>
+
+    <header>
+        <div class="zagolovok_saytu">
+            <h1>Динамічне меню</h1>
+        </div>
+    </header>
+
+    <nav class="golovne_menyu" id="mainNavContainer">
+        <button class="knopka_burger" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="menuContainer" class="spysok_menu">
+        </ul>
+    </nav>
+
+    <main style="height: 1200px; padding: 20px;">
+        <p>Прокрутіть сторінку, щоб побачити, як меню може залишатися фіксованим або змінювати вигляд.</p>
+         <p>Це місце для основного вмісту сторінки.</p>
+    </main>
+
+    <footer class="pidval_saytu" id="pageFooter">
+        <div class="informaciya_pidvalu">
+            <p>&copy; 2025 Мій Сайт.</p>
+        </div >
+    <p>Зроблено з кавою :)</p>
+
+    </footer>
+
+    <script>
+        const menuData = {
+            "items": [
+                {
+                    "title": "Головна",
+                    "link": "#",
+                    "submenu": []
+                },
+                {
+                    "title": "Продукти",
+                    "link": "#products",
+                    "submenu": [
+                        {
+                            "title": "Категорія 1",
+                            "link": "#cat1",
+                            "submenu": [
+                                {
+                                    "title": "Підкатегорія A",
+                                    "link": "#subA"
+                                },
+                                {
+                                    "title": "Підкатегорія B",
+                                    "link": "#subB"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Категорія 2",
+                            "link": "#cat2"
+                        }
+                    ]
+                },
+                 {
+                    "title": "Послуги",
+                    "link": "#services",
+                    "submenu": []
+                },
+                 {
+                    "title": "Галерея",
+                    "link": "#gallery",
+                    "submenu": []
+                },
+                {
+                    "title": "Контакти",
+                    "link": "#contacts",
+                    "submenu": []
+                }
+            ]
+        };
+    </script>
+
+    <script src="dynamic_menu_script.js"></script>
+</body>
+</html> 
