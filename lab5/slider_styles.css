@@ -1,0 +1,152 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0f7fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 30px;
+}
+
+.slider_konteiner {
+    position: relative;
+    max-width: 960px; 
+    height: 480px; 
+    margin: 20px auto;
+    overflow: hidden; 
+    border: 8px solid #004d40; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.slajdy {
+    display: flex;
+    height: 100%; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.slajd {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: cover; 
+}
+
+.knopka_navigaciyi {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1; 
+    font-size: 18px;
+    border-radius: 3px; 
+     margin: 0 10px; 
+}
+
+.knopka_navigaciyi.nazad {
+    left: 0; 
+}
+
+.knopka_navigaciyi.vpered {
+    right: 0; 
+}
+
+.knopka_navigaciyi:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav_tochky {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.tochka {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 50%;
+    margin: 0 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tochka.aktyvna {
+    background-color: #00bcd4; 
+}
+
+.elementy_upravlinnya {
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    z-index: 1; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 5px 10px; 
+    border-radius: 3px;
+}
+
+.likhylnyk_slajdiv {
+    margin-right: 15px; 
+    color: #333; 
+}
+
+.knopka_autoplay {
+    background-color: #ff9800; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+     font-size: 14px;
+}
+
+.knopka_autoplay:hover {
+    background-color: #f57c00;
+}
+
+
+@media (max-width: 768px) {
+    .knopka_navigaciyi {
+        padding: 8px 12px; 
+        font-size: 16px;
+         margin: 0 5px;
+    }
+
+    .nav_tochky {
+        bottom: 5px; 
+    }
+
+    .elementy_upravlinnya {
+         bottom: 5px;
+         left: 5px;
+         padding: 3px 8px;
+    }
+
+    .likhylnyk_slajdiv {
+         margin-right: 10px;
+         font-size: 12px;
+    }
+
+    .knopka_autoplay {
+         padding: 3px 8px;
+         font-size: 12px;
+    }
+
+     .slider_konteiner {
+         border-width: 5px; 
+     }
+} 

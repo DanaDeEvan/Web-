@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5</title>
+    <link rel="stylesheet" href="slider_styles.css">
+</head>
+<body>
+
+    <h1>Мій Слайдер Зображень</h1>
+
+    <div class="slider_konteiner" id="myImageSlider">
+        <div class="slajdy" id="slidesContainer">
+            <img src="https://via.placeholder.com/800x400?text=Зображення+1" alt="Зображення 1" class="slajd" id="slide1">
+            <img src="https://via.placeholder.com/800x400?text=Зображення+2" alt="Зображення 2" class="slajd" id="slide2">
+            <img src="https://via.placeholder.com/800x400?text=Зображення+3" alt="Зображення 3" class="slajd" id="slide3">
+        </div>
+
+        <button class="knopka_navigaciyi nazad" id="prevBtn">Назад</button>
+        <button class="knopka_navigaciyi vpered" id="nextBtn">Вперед</button>
+
+        <div class="nav_tochky" id="dotsContainer">
+            <!-- Точки будуть додані JS -->
+        </div>
+        
+        <div class="elementy_upravlinnya">
+             <span class="likhylnyk_slajdiv" id="slideCounter">1 / 3</span>
+            <button class="knopka_autoplay" id="autoplayToggle">Пауза</button>
+        </div>
+
+    </div>
+
+    <footer class="pidval_saytu" id="pageFooterLab5">
+        <div class="informaciya_pidvalu">
+            <p>&copy; 2025 Мій Слайдер.</p>
+        </div >
+
+    </footer>
+
+    <script src="slider_logic.js"></script>
+</body>
+</html> 
