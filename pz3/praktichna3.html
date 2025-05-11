@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Практична робота №3</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 15px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+text-align: center;
+            margin-left: 40px;
+        }
+
+        .konteiner {
+            width: 85%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 5px 5px 10px #888888;
+        }
+
+        .zagolovok-rozdilu {
+          color: #555;
+          border-bottom: 2px dashed #555;
+          padding-bottom: 5px;
+          margin-top: 30px;
+        }
+
+        ul.spisok {
+            list-style-type: square;
+            margin-left: 50px;
+        }
+
+        #my_link {
+          display: inline-block;
+          margin-top: 15px;
+          color: darkblue;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+        
+        #my_link:hover {
+          color: red;
+text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="my_styles_lab3.css">
+</head>
+<body>
+
+<div class="konteiner">
+    <h1 style="color: green; text-shadow: 1px 1px 2px #000;">Лабораторна 3: CSS</h1>
+
+    <p>Це перший параграф з текстом для стилізації. Ми будемо застосовувати різні правила CSS щоб побачити як змінюється вигляд.</p>
+
+    <h2 class="zagolovok-rozdilu">Списки</h2>
+    <ul class="spisok">
+        <li>Пункт перший</li>
+        <li>Пункт другий</li>
+        <li>Пункт третій</li>
+    </ul>
+
+    <ol>
+        <li>Нумерований пункт 1</li>
+        <li>Нумерований пункт 2</li>
+    </ol>
+
+    <h2 class="zagolovok-rozdilu">Посилання та зображення</h2>
+
+    <p><a href="https://example.com" id="my_link" target="_blank">Приклад посилання</a></p>
+
+    <img src="https://via.placeholder.com/300x150" alt="Просто картинка" id="kartynka" width="300">
+
+    <div style="margin-top: 20px; padding: 10px; border: 1px solid blue;">
+        <p>Це div з вбудованими стилями.</p>
+    </div>
+</div>
+
+<footer id="pidpis">
+  <p>Зроблено з кавою :)</p>
+</footer>
+
+</body>
+</html> 
