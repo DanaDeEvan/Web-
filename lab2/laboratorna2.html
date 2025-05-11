@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2</title>
+    <link rel="stylesheet" href="nav_styles.css">
+</head>
+<body>
+
+    <header class="shapka_nav">
+        <div class="logo_blok">
+            <img src="https://via.placeholder.com/100x40?text=Логотип" alt="Логотип сайту" id="logoImg">
+        </div>
+        
+        <button class="burger_menu_knopka" id="mobileMenuToggle" aria-label="Відкрити/закрити меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="golovna_navigatsiya" id="mainNav">
+            <ul class="spysok_punktiv">
+                <li><a href="#">Головна</a></li>
+                <li class="punkt_z_pidmenyu">
+                    <a href="#">Продукти</a>
+                    <ul class="pidmenyu">
+                        <li><a href="#">Категорія 1</a></li>
+                        <li><a href="#">Категорія 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Послуги</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+            
+            <form class="forma_poshuku_nav">
+                <input type="text" placeholder="Пошук...">
+                <button type="submit">Знайти</button>
+            </form>
+        </nav>
+    </header>
+
+    <main style="height: 1000px;">
+    </main>
+
+    <footer class="pidval_saitu" id="page_footer">
+        <div class="kontaktna_informatsiya">
+            <h4>Контакти</h4>
+            <address>
+                м. Київ, вул. Тестова, 1<br>
+                <a href="mailto:test@example.com">test@example.com</a><br>
+                <a href="tel:+380998887766">+38 (099) 888-77-66</a>
+            </address>
+        </div >
+        <div class="kopirayt">
+            <p>&copy; 2025 Назва Сайту. <small>Всі права захищено.</small></p>
+        </div>
+    <p>Зроблено з кавою :)</p>
+
+    </footer>
+
+    <script src="nav_script.js"></script>
+</body>
+</html> 
