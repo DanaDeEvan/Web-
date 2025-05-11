@@ -1,0 +1,96 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 25px;
+    background-color: #eef;
+    color: #333;
+}
+
+#main_title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-left: 40px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.konteiner_formy {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    max-width: 550px;
+    margin: 20px auto;
+    margin-left: 40px;
+}
+
+.grupa_polya {
+    margin-bottom: 18px;
+}
+
+.grupa_polya label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: normal;
+    color: #555;
+}
+
+.grupa_polya input[type="text"],
+.grupa_polya input[type="email"],
+.grupa_polya input[type="password"],
+.grupa_polya input[type="tel"],
+.grupa_polya input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.grupa_polya input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+#checkbox_terms label {
+    font-weight: normal;
+    display: inline;
+}
+
+.error_text {
+    color: #e74c3c;
+    font-size: 0.85em;
+    display: block;
+    margin-top: 4px;
+    min-height: 1em;
+}
+
+#submitBtn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    display: block;
+    width: 50%;
+    margin: 25px auto 0 auto;
+    margin-left: 40px;
+    transition: background-color 0.25s ease;
+}
+
+#submitBtn:hover {
+    background-color: #2980b9;
+}
+
+#pidpis_valid {
+    margin-top: 45px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px dashed #ccc;
+    padding-top: 15px;
+} 
