@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 - Фільтрація та сортування</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="author-info">
+        <p>Виконала: Манченко Анна</p>
+        <p>Дата: 10.05.2024</p>
+    </div>
+    
+    <header>
+        <h1>Фільтрація та сортування товарів</h1>
+        <p class="subtitle">Лабораторна робота №6</p>
+    </header>
+    
+    <main>
+        <section class="control-panel">
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Пошук за назвою...">
+                <button id="search-btn">Пошук</button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <h3>Сортування:</h3>
+                    <select id="sortBy">
+                        <option value="default">За замовчуванням</option>
+                        <option value="priceAsc">За ціною ↑</option>
+                        <option value="priceDesc">За ціною ↓</option>
+                        <option value="nameAsc">За назвою (А-Я)</option>
+                        <option value="nameDesc">За назвою (Я-А)</option>
+                        <option value="ratingDesc">За рейтингом</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Категорія:</h3>
+                    <div class="filter-options" id="category-filters">
+                        <label><input type="checkbox" value="electronics"> Електроніка</label>
+                        <label><input type="checkbox" value="clothing"> Одяг</label>
+                        <label><input type="checkbox" value="jewelry"> Ювелірні вироби</label>
+                        <label><input type="checkbox" value="housewares"> Товари для дому</label>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Ціна:</h3>
+                    <div class="range-filter">
+                        <input type="range" id="price-min" min="0" max="1000" value="0">
+                        <input type="range" id="price-max" min="0" max="1000" value="1000">
+                        <div class="price-inputs">
+                            <input type="number" id="price-min-value" min="0" value="0">
+                            <span>-</span>
+                            <input type="number" id="price-max-value" min="0" value="1000">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Рейтинг:</h3>
+                    <div class="filter-options" id="rating-filters">
+                        <label><input type="checkbox" value="5"> 5 зірок</label>
+                        <label><input type="checkbox" value="4"> 4+ зірок</label>
+                        <label><input type="checkbox" value="3"> 3+ зірок</label>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button id="reset-filters">Скинути всі фільтри</button>
+                </div>
+            </div>
+            
+            <div class="active-filters" id="active-filters">
+                <!-- Активні фільтри будуть додані тут за допомогою JS -->
+            </div>
+        </section>
+        
+        <section class="products">
+            <h2>Товари <span id="product-count">(0)</span></h2>
+            <div id="products-container" class="products-grid">
+                <!-- Товари будуть додані тут за допомогою JS -->
+                <div class="loading">Завантаження товарів...</div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Лабораторна робота №6 - Фільтрація та сортування</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
