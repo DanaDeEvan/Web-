@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №7 - Типографіка та шрифти</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font optimization -->
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <div class="author-info">
+        <p>Виконала: Манченко Анна</p>
+        <p>Дата: 25.05.2025</p>
+    </div>
+    
+    <header>
+        <h1>Типографіка та шрифти у веб-дизайні</h1>
+        <p class="subtitle">Вивчення типографіки, використання системних, Google та власних шрифтів</p>
+    </header>
+    
+    <main>
+        <section class="introduction">
+            <h2>Вступ до типографіки</h2>
+            <p class="lead-paragraph">Типографіка — це мистецтво та техніка розміщення текстового матеріалу таким чином, щоб зробити його чітким, розбірливим і візуально привабливим для читача.</p>
+            <p>У веб-дизайні правильно підібрані шрифти допомагають не тільки передати інформацію, але й створити настрій, підкреслити стиль та покращити досвід користувача.</p>
+            <blockquote>
+                "Типографіка — це те, що робить письмову мову видимою. Добре обрана типографіка підвищує розбірливість, читабельність та привабливість тексту."
+                <cite>— Роберт Брінгхерст</cite>
+            </blockquote>
+        </section>
+        
+        <section class="font-types">
+            <h2>Типи шрифтів</h2>
+            
+            <div class="font-category">
+                <h3>Системні шрифти</h3>
+                <p class="system-font">Цей текст відображається системним шрифтом. Системні шрифти вже встановлені на пристрої користувача і не потребують завантаження.</p>
+                <p class="system-font-example">Приклад: Arial, Helvetica, Times New Roman, Georgia</p>
+            </div>
+            
+            <div class="font-category">
+                <h3>Google Fonts</h3>
+                <p class="google-font">Цей текст використовує Google Font - Montserrat. Google Fonts - це безкоштовна бібліотека шрифтів, яку можна легко інтегрувати на веб-сайт.</p>
+                <p class="google-font-example">Приклад: Montserrat, Roboto, Open Sans, Lato</p>
+            </div>
+            
+            <div class="font-category">
+                <h3>Локальні шрифти</h3>
+                <p class="local-font">Цей текст використовує локальний шрифт. Локальні шрифти завантажуються з сервера сайту разом з іншими ресурсами.</p>
+                <p class="local-font-example">Приклад: Open Sans (завантажений локально через @font-face)</p>
+            </div>
+        </section>
+        
+        <section class="typography-hierarchy">
+            <h2>Ієрархія типографіки</h2>
+            
+            <article class="article-example">
+                <h3>Заголовок статті</h3>
+                <p class="article-meta">Опубліковано: 25 травня 2025 | Категорія: Дизайн</p>
+                <h4>Підзаголовок першого рівня</h4>
+                <p>Правильна ієрархія тексту допомагає користувачам швидко сканувати сторінку та знаходити потрібну інформацію. Використання різних розмірів, ваги та стилів шрифтів створює візуальну структуру сторінки.</p>
+                <h5>Підзаголовок другого рівня</h5>
+                <p>Типографічна ієрархія створюється за допомогою контрасту в розмірі, кольорі, вазі шрифту та відступах. Важливо зберігати послідовність у ієрархії на всьому сайті.</p>
+                <ul>
+                    <li>Розмір шрифту впливає на читабельність</li>
+                    <li>Контраст кольорів покращує доступність</li>
+                    <li>Відступи та інтервали покращують сприйняття інформації</li>
+                </ul>
+                <h5>Підзаголовок другого рівня</h5>
+                <p>Для тексту основного вмісту найважливішими параметрами є:</p>
+                <ol>
+                    <li>Розмір шрифту (зазвичай 16-18px)</li>
+                    <li>Висота рядка (line-height: 1.5-1.6)</li>
+                    <li>Довжина рядка (65-75 символів)</li>
+                    <li>Контраст із фоном</li>
+                </ol>
+            </article>
+        </section>
+        
+        <section class="font-optimization">
+            <h2>Оптимізація шрифтів</h2>
+            <p>Оптимізація шрифтів є важливою для швидкого завантаження сторінки та кращого користувацького досвіду:</p>
+            <ul class="optimization-tips">
+                <li>Використання формату WOFF2 для найкращого стиснення</li>
+                <li>Застосування preload для критичних шрифтів</li>
+                <li>Обмеження кількості варіантів шрифтів</li>
+                <li>Використання font-display: swap для уникнення затримки відображення тексту</li>
+                <li>Додавання font-subsetting для завантаження тільки потрібних символів</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Практична робота №7 - Типографіка та шрифти у веб-дизайні</p>
+    </footer>
+</body>
+</html> 

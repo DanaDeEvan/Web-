@@ -1,0 +1,310 @@
+/* Базове скидання стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Оголошення локального шрифту */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+         url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+         url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Загальні стилі */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.author-info {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-style: italic;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+header .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/*  Вступний розділ */ 
+.introduction h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.lead-paragraph {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    border-left: 4px solid #3a6ea5;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #555;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+/* Розділ типів шрифтів  */
+.font-types h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.font-category {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.font-category h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #3a6ea5;
+}
+
+.system-font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.google-font {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.local-font {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.system-font-example,
+.google-font-example,
+.local-font-example {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Ієрархія типографіки  */
+.typography-hierarchy h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.article-example {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.article-example h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.article-meta {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.article-example h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: 25px 0 15px;
+    color: #3a6ea5;
+}
+
+.article-example h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+    color: #555;
+}
+
+.article-example p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.article-example ul,
+.article-example ol {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.article-example li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Оптимізація  шрифтів */
+.font-optimization h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.optimization-tips {
+    list-style-type: none;
+    padding: 0;
+}
+
+.optimization-tips li {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: #f0f7ff;
+    border-left: 3px solid #3a6ea5;
+    border-radius: 0 5px 5px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+/*  Футер  */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/*  Адаптивність */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 20px;
+    }
+    
+    .lead-paragraph {
+        font-size: 1.1rem;
+    }
+    
+    .article-example h3 {
+        font-size: 1.6rem;
+    }
+    
+    .article-example h4 {
+        font-size: 1.3rem;
+    }
+    
+    .article-example h5 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .lead-paragraph {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 15px;
+    }
+    
+    .font-category,
+    .article-example {
+        padding: 15px;
+    }
+} 
