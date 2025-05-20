@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №6 - Робота з API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="author-info">
+        <p>Виконала: Манченко Анна</p>
+        <p>Дата: 15.05.2025</p>
+    </div>
+    
+    <header>
+        <h1>Робота з API та отримання даних</h1>
+        <p class="api-info">API, що використовується: <a href="https://fakestoreapi.com" target="_blank">Fake Store API</a></p>
+    </header>
+    
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Пошук...">
+                <button id="searchBtn">Шукати</button>
+            </div>
+            
+            <div class="filter-container">
+                <select id="categoryFilter">
+                    <option value="">Всі категорії</option>
+                    <option value="electronics">Електроніка</option>
+                    <option value="jewelery">Ювелірні вироби</option>
+                    <option value="men's clothing">Чоловічий одяг</option>
+                    <option value="women's clothing">Жіночий одяг</option>
+                </select>
+                
+                <div class="price-filter">
+                    <span>Ціна:</span>
+                    <input type="number" id="minPrice" placeholder="від">
+                    <input type="number" id="maxPrice" placeholder="до">
+                    <button id="filterBtn">Фільтрувати</button>
+                </div>
+            </div>
+        </section>
+        
+        <div id="loader" class="loader">Завантаження...</div>
+        <div id="error-message" class="error-message"></div>
+        
+        <section class="products-section">
+            <div id="products-container" class="products-container"></div>
+        </section>
+        
+        <section class="pagination-section">
+            <div class="pagination" id="pagination">
+                <button id="prevPage" disabled>Назад</button>
+                <span id="currentPage">1</span> з <span id="totalPages">1</span>
+                <button id="nextPage">Вперед</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Практична робота №6 - Робота з API та отримання даних</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
