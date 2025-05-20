@@ -1,0 +1,400 @@
+/* Основні змінні */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-bg: #f5f7fa;
+    --dark-bg: #2c3e50;
+    --spacing: 2rem;
+    --container-width: 1200px;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Скидання стилів */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Базові стилі */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing);
+}
+
+section {
+    padding: var(--spacing) 0;
+    margin-bottom: var(--spacing);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Інформація про автора */
+.author-info {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.author-info p {
+    margin: 0.2rem 0;
+}
+
+/* Головний банер */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    min-height: 300px;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.hero-banner picture, 
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+
+.hero-text h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 800px;
+}
+
+/* Секція з техніками */
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing);
+    margin: 2rem 0;
+}
+
+.technique {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.technique:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.technique picture {
+    margin: 0 auto 1rem;
+    width: 64px;
+    height: 64px;
+}
+
+.technique h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Приклад фотографії з Art Direction */
+.photo-example {
+    background-color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.art-direction-example {
+    width: 100%;
+    margin: 1.5rem 0;
+    display: block;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.art-direction-example img {
+    width: 100%;
+    transition: var(--transition);
+}
+
+.image-info {
+    background-color: var(--light-bg);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+}
+
+.image-info ul {
+    margin-left: 1.5rem;
+}
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item picture, .gallery-item img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    background: white;
+    font-size: 0.9rem;
+}
+
+/* Адаптивні зображення */
+.responsive-example {
+    background-color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin: 2rem 0;
+}
+
+.responsive-example h3 {
+    margin-bottom: 1rem;
+}
+
+.responsive-example picture {
+    margin: 1.5rem 0;
+    display: block;
+}
+
+code {
+    background-color: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+/* Фонові зображення */
+.background-section {
+    position: relative;
+}
+
+.background-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing);
+}
+
+.bg-example {
+    height: 300px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.bg-example h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bg-example p {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Медіа-запити для різних фонових зображень */
+.bg-example-1 {
+    background-image: url('../images/optimized/background-desktop.jpg');
+}
+
+.bg-example-2 {
+    background-image: 
+        image-set(
+            url('../images/optimized/bg-pattern.webp') type('image/webp'),
+            url('../images/optimized/bg-pattern.jpg') type('image/jpeg')
+        );
+}
+
+/* Прогресивне завантаження */
+.progressive-section {
+    background-color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.progressive-image {
+    position: relative;
+    width: 100%;
+    margin: 1.5rem 0;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    background-color: #eee;
+    border-radius: var(--border-radius);
+}
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+    transform: scale(1.1);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.reveal-image {
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reveal-image.loaded {
+    opacity: 1;
+}
+
+.placeholder.loaded {
+    opacity: 0;
+}
+
+/* Футер */
+footer {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: var(--spacing) 0;
+    margin-top: var(--spacing);
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.author-credit {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Медіа-запити для адаптивності фонових зображень */
+@media (max-width: 768px) {
+    .bg-example-1 {
+        background-image: url('../images/optimized/background-mobile.jpg');
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .bg-example-1 {
+        background-image: url('../images/optimized/background-tablet.jpg');
+    }
+}
+
+/* Загальні адаптивні стилі */
+@media (max-width: 768px) {
+    :root {
+        --spacing: 1.5rem;
+    }
+    
+    .techniques-grid,
+    .gallery,
+    .background-examples {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-text h1 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
