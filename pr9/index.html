@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №9 - Кешування та стиснення веб-ресурсів</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+    <div class="author-info">
+        <p>Виконала: Манченко Анна</p>
+        <p>Дата: 12.06.2025</p>
+    </div>
+    
+    <header>
+        <h1>Кешування та стиснення веб-ресурсів</h1>
+        <p class="subtitle">Оптимізація роботи з даними на стороні клієнта</p>
+    </header>
+    
+    <main>
+        <section class="introduction">
+            <h2>Важливість клієнтської оптимізації</h2>
+            <p class="lead-paragraph">Кешування та стиснення дозволяють зменшити навантаження на сервер, прискорити завантаження сторінок та покращити взаємодію користувача з веб-сайтом.</p>
+            <p>На цій сторінці продемонстровано різні методи оптимізації роботи з даними на клієнтській стороні.</p>
+        </section>
+        
+        <section class="user-data">
+            <h2>Збереження даних користувача</h2>
+            
+            <div class="form-container">
+                <h3>Персональні дані</h3>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="userName">Ім'я:</label>
+                        <input type="text" id="userName" name="userName" placeholder="Введіть ваше ім'я">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="Введіть ваш email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userAge">Вік:</label>
+                        <input type="number" id="userAge" name="userAge" placeholder="Введіть ваш вік">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Зберегти дані</button>
+                        <button type="button" id="clearData" class="btn-secondary">Очистити дані</button>
+                    </div>
+                </form>
+                
+                <div class="storage-info">
+                    <h4>Інформація про збереження:</h4>
+                    <p>Дані зберігаються у <code>localStorage</code> і будуть доступні навіть після закриття браузера.</p>
+                    <div id="storageStatus" class="status"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="user-settings">
+            <h2>Налаштування інтерфейсу</h2>
+            
+            <div class="settings-container">
+                <h3>Персоналізація</h3>
+                
+                <div class="settings-group">
+                    <h4>Тема інтерфейсу:</h4>
+                    <div class="theme-selector">
+                        <button class="theme-btn" data-theme="light">Світла</button>
+                        <button class="theme-btn" data-theme="dark">Темна</button>
+                        <button class="theme-btn" data-theme="blue">Синя</button>
+                    </div>
+                </div>
+                
+                <div class="settings-group">
+                    <h4>Розмір тексту:</h4>
+                    <div class="font-selector">
+                        <button class="font-btn" data-size="small">Малий</button>
+                        <button class="font-btn" data-size="medium">Середній</button>
+                        <button class="font-btn" data-size="large">Великий</button>
+                    </div>
+                </div>
+                
+                <div class="settings-info">
+                    <p>Налаштування зберігаються у <code>localStorage</code> і застосовуються автоматично при наступних відвідуваннях.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="image-gallery">
+            <h2>Галерея з кешуванням зображень</h2>
+            
+            <div class="gallery-container">
+                <div class="gallery-controls">
+                    <button id="loadGallery" class="btn-primary">Завантажити зображення</button>
+                    <button id="clearGalleryCache" class="btn-secondary">Очистити кеш</button>
+                    <div class="cache-status">Статус кешу: <span id="cacheStatus">Не використовується</span></div>
+                </div>
+                
+                <div class="gallery-items" id="galleryItems"></div>
+                
+                <div class="gallery-info">
+                    <p>При першому завантаженні зображення кешуються. Наступні запити обслуговуються з кешу.</p>
+                    <div class="load-time">Час завантаження: <span id="loadTime">-</span> мс</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="dynamic-content">
+            <h2>Динамічний контент з кешуванням даних</h2>
+            
+            <div class="api-container">
+                <div class="api-controls">
+                    <button id="loadPosts" class="btn-primary">Завантажити пости</button>
+                    <button id="clearApiCache" class="btn-secondary">Очистити кеш API</button>
+                </div>
+                
+                <div class="cache-info">
+                    <div class="api-status">
+                        Джерело даних: <span id="dataSource">-</span>
+                    </div>
+                    <div class="api-time">
+                        Час отримання: <span id="apiTime">-</span> мс
+                    </div>
+                </div>
+                
+                <div id="postsContainer" class="posts-container"></div>
+            </div>
+        </section>
+        
+        <section class="optimization">
+            <h2>Методи оптимізації в проекті</h2>
+            
+            <div class="optimization-container">
+                <div class="optimization-item">
+                    <h3>Локальне сховище (localStorage)</h3>
+                    <p>Зберігає дані користувача та налаштування між сеансами.</p>
+                    <code>localStorage.setItem('userName', name);</code>
+                </div>
+                
+                <div class="optimization-item">
+                    <h3>Сесійне сховище (sessionStorage)</h3>
+                    <p>Зберігає тимчасові дані на час сеансу користувача.</p>
+                    <code>sessionStorage.setItem('lastVisited', Date.now());</code>
+                </div>
+                
+                <div class="optimization-item">
+                    <h3>Кешування даних у JavaScript</h3>
+                    <p>Кешує відповіді API та результати важких обчислень.</p>
+                    <code>const cache = new Map(); // Використовується для кешування даних</code>
+                </div>
+                
+                <div class="optimization-item">
+                    <h3>Мінімізація ресурсів</h3>
+                    <p>CSS та JavaScript файли мінімізовані для зменшення їх розміру.</p>
+                    <div class="file-comparison">
+                        <div class="file">
+                            <span>Оригінальний CSS:</span>
+                            <span class="file-size">15 KB</span>
+                        </div>
+                        <div class="file">
+                            <span>Мінімізований CSS:</span>
+                            <span class="file-size">10 KB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Практична робота №9 - Кешування та стиснення веб-ресурсів</p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html> 
