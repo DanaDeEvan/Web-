@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оптимізація продуктивності</title>
+    
+    <!-- Критичний CSS вбудований -->
+    <style>
+        /* Критичні стилі для швидкого початкового рендерингу */
+        :root{--primary-color:#2c3e50;--text-color:#333;--light-bg:#f5f7fa}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,-apple-system,sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--light-bg)}img{max-width:100%;height:auto;display:block}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 1rem}header{background-color:var(--primary-color);color:white;padding:1rem 0}h1,h2,h3{margin-bottom:1rem}p{margin-bottom:1rem}
+    </style>
+    
+    <!-- Відкладене завантаження CSS -->
+    <link rel="preload" href="css/optimized/styles.min.css" as="style" 
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/optimized/styles.min.css">
+    </noscript>
+    
+    <!-- Оптимізація шрифтів -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Preload важливих ресурсів -->
+    <link rel="preload" href="js/optimized/critical.min.js" as="script">
+    
+    <!-- Асинхронне завантаження критичного JavaScript -->
+    <script src="js/optimized/critical.min.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Оптимізація продуктивності</h1>
+            <p>Лабораторна робота №9</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="intro">
+            <h2>Методи оптимізації веб-сторінки</h2>
+            <p>Ця сторінка демонструє різні техніки оптимізації для покращення продуктивності.</p>
+            
+            <!-- Оптимізоване завантаження зображення -->
+            <picture>
+                <source srcset="images/web-performance-large.webp" type="image/webp">
+                <img src="images/web-performance-large.jpg" 
+                     alt="Веб-продуктивність" 
+                     width="800" height="400" 
+                     fetchpriority="high">
+            </picture>
+        </section>
+
+        <section id="techniques">
+            <h2>Застосовані техніки оптимізації</h2>
+            <ul>
+                <li>Мінімізація HTTP-запитів через об'єднання файлів</li>
+                <li>Оптимізація CSS та JavaScript (мінімізація)</li>
+                <li>Відкладене завантаження некритичних ресурсів</li>
+                <li>Асинхронне завантаження скриптів</li>
+                <li>Оптимізація завантаження шрифтів</li>
+                <li>Оптимізація критичного шляху рендерингу</li>
+            </ul>
+        </section>
+
+        <section id="images">
+            <h2>Оптимізоване завантаження зображень</h2>
+            <div class="image-gallery">
+                <!-- Використання lazy loading для зображень -->
+                <picture>
+                    <source srcset="images/gallery1.webp" type="image/webp">
+                    <img src="images/gallery1.jpg" 
+                         alt="Зображення 1" 
+                         width="400" height="300" 
+                         loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="images/gallery2.webp" type="image/webp">
+                    <img src="images/gallery2.jpg" 
+                         alt="Зображення 2" 
+                         width="400" height="300" 
+                         loading="lazy">
+                </picture>
+                <picture>
+                    <source srcset="images/gallery3.webp" type="image/webp">
+                    <img src="images/gallery3.jpg" 
+                         alt="Зображення 3" 
+                         width="400" height="300" 
+                         loading="lazy">
+                </picture>
+            </div>
+        </section>
+
+        <section id="performance">
+            <h2>Результати оптимізації</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Метрика</th>
+                            <th>До оптимізації</th>
+                            <th>Після оптимізації</th>
+                            <th>Покращення</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Розмір сторінки</td>
+                            <td>5.2 МБ</td>
+                            <td>1.8 МБ</td>
+                            <td>65%</td>
+                        </tr>
+                        <tr>
+                            <td>Кількість запитів</td>
+                            <td>48</td>
+                            <td>12</td>
+                            <td>75%</td>
+                        </tr>
+                        <tr>
+                            <td>Час завантаження</td>
+                            <td>5.8 сек</td>
+                            <td>1.4 сек</td>
+                            <td>76%</td>
+                        </tr>
+                        <tr>
+                            <td>First Contentful Paint</td>
+                            <td>2.1 сек</td>
+                            <td>0.8 сек</td>
+                            <td>62%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Відкладене завантаження контенту -->
+        <div id="lazyContent">
+            <!-- Контент завантажиться після основної сторінки -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Лабораторна робота №9 | Манченко Анна</p>
+        </div>
+    </footer>
+
+    <!-- Відкладене завантаження некритичних скриптів -->
+    <script src="js/optimized/main.min.js" defer></script>
+    
+    <!-- Завантаження аналітики після завантаження сторінки -->
+    <script>
+        window.addEventListener('load', function() {
+            // Відкладене завантаження аналітики
+            const analyticsScript = document.createElement('script');
+            analyticsScript.src = 'js/optimized/analytics.min.js';
+            document.body.appendChild(analyticsScript);
+            
+            // Відкладене завантаження додаткового контенту
+            document.getElementById('lazyContent').innerHTML = `
+                <section id="additionalContent">
+                    <h2>Додатковий контент</h2>
+                    <p>Цей контент завантажується відкладено після завантаження основної сторінки.</p>
+                </section>
+            `;
+        });
+    </script>
+</body>
+</html> 
