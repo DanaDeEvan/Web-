@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №8 - Оптимізація швидкості завантаження зображень">
+    <meta name="keywords" content="HTML, CSS, JavaScript, оптимізація зображень, lazy loading, WebP, srcset">
+    <title>Лабораторна робота №8 - Оптимізація зображень</title>
+    <link rel="stylesheet" href="image_optimization_styles.css">
+    <link rel="preload" href="https://picsum.photos/50/50?random=1" as="image" type="image/jpeg">
+</head>
+<body>
+
+    <header class="shapka_optimizatsii" id="pageHeader">
+        <h1 id="main_title">Оптимізація швидкості завантаження зображень</h1>
+        <p class="pidpys_shapky">Лабораторна робота №8</p>
+    </header>
+
+    <main id="osnovnyi_zmist" class="main_content_wrapper">
+        
+        <!-- Вступна секція -->
+        <section class="vstup_sekciya">
+            <h2 class="zagolovok_sekcii">Сучасні підходи до оптимізації зображень</h2>
+            <p class="osnovnyi_tekst">
+                Оптимізація зображень є критично важливою для швидкості завантаження веб-сторінок. 
+                Сучасні технології дозволяють значно покращити користувацький досвід через правильний 
+                вибір форматів, адаптивні зображення та розумне завантаження.
+            </p>
+        </section>
+
+        <!-- Адаптивні зображення -->
+        <section class="adaptyvni_zobrazhennya_sekciya">
+            <h2 class="zagolovok_sekcii">Адаптивні зображення (Picture + Srcset)</h2>
+            
+            <div class="prykla_konteyner">
+                <h3 class="zagolovok_statti">Art Direction - різні зображення для різних пристроїв</h3>
+                
+                <picture class="adaptyvne_zobrazhennya">
+                    <source 
+                        media="(min-width: 1200px)"
+                        srcset="https://picsum.photos/1200/400?random=1" 
+                        type="image/jpeg">
+                    <source 
+                        media="(min-width: 768px)"
+                        srcset="https://picsum.photos/800/300?random=2" 
+                        type="image/jpeg">
+                    <source 
+                        media="(min-width: 480px)"
+                        srcset="https://picsum.photos/600/250?random=3" 
+                        type="image/jpeg">
+                    <img 
+                        src="https://picsum.photos/400/200?random=4" 
+                        alt="Адаптивне зображення з різними розмірами для різних пристроїв"
+                        loading="lazy"
+                        class="responsive_image">
+                </picture>
+                
+                <div class="karta_prykladu">
+                    <h4 class="podzagolovok">Переваги Picture елементу:</h4>
+                    <ul class="markerovanyy_spysok">
+                        <li>Art Direction - показ різних зображень на різних пристроях</li>
+                        <li>Підтримка сучасних форматів з fallback</li>
+                        <li>Повний контроль над вибором зображення</li>
+                        <li>Оптимізація для різних щільностей екрану</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- WebP з fallback -->
+        <section class="webp_sekciya">
+            <h2 class="zagolovok_sekcii">WebP формат з JPEG fallback</h2>
+            
+            <div class="porivnyannya_konteyner">
+                <div class="format_prykla">
+                    <h3 class="zagolovok_statti">WebP зображення (сучасні браузери)</h3>
+                    <picture class="webp_container">
+                        <source 
+                            srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&fm=webp" 
+                            type="image/webp">
+                        <img 
+                            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" 
+                            alt="Приклад WebP зображення з JPEG fallback"
+                            loading="lazy"
+                            class="format_image">
+                    </picture>
+                    <p class="malenkyi_tekst">WebP забезпечує на 25-35% менший розмір файлу</p>
+                </div>
+                
+                <div class="karta_prykladu">
+                    <h4 class="podzagolovok">Переваги WebP:</h4>
+                    <ul class="markerovanyy_spysok">
+                        <li><strong>Менший розмір:</strong> до 35% економії порівняно з JPEG</li>
+                        <li><strong>Підтримка прозорості:</strong> як альтернатива PNG</li>
+                        <li><strong>Прогресивне завантаження</strong></li>
+                        <li><strong>Широка підтримка браузерів</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Srcset для різних щільностей -->
+        <section class="shchlnist_sekciya">
+            <h2 class="zagolovok_sekcii">Підтримка різних щільностей екрану</h2>
+            
+            <div class="density_examples">
+                <img 
+                    srcset="https://picsum.photos/300/200?random=5 1x,
+                            https://picsum.photos/600/400?random=6 2x,
+                            https://picsum.photos/900/600?random=7 3x"
+                    src="https://picsum.photos/300/200?random=5"
+                    alt="Зображення для різних щільностей екрану"
+                    loading="lazy"
+                    class="density_image">
+                
+                <div class="karta_prykladu">
+                    <h4 class="podzagolovok">Щільність пікселів:</h4>
+                    <ul class="markerovanyy_spysok">
+                        <li><strong>1x:</strong> Стандартні екрани (300x200px)</li>
+                        <li><strong>2x:</strong> Retina екрани (600x400px)</li>
+                        <li><strong>3x:</strong> Високощільні мобільні (900x600px)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lazy Loading галерея -->
+        <section class="galereya_sekciya">
+            <h2 class="zagolovok_sekcii">Галерея з Lazy Loading</h2>
+            <p class="osnovnyi_tekst">
+                Зображення завантажуються лише при наближенні до області видимості, 
+                що значно пришвидшує початкове завантаження сторінки.
+            </p>
+            
+            <div class="galereya_konteyner" id="imageGallery">
+                <div class="galereya_element" data-aos="fade-up">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23ddd'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23999'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                        data-src="https://picsum.photos/300/200?random=10"
+                        alt="Галерея зображення 1"
+                        loading="lazy"
+                        class="lazy_image">
+                    <div class="galereya_overlay">
+                        <p>Зображення 1</p>
+                    </div>
+                </div>
+                
+                <div class="galereya_element" data-aos="fade-up" data-aos-delay="100">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23ddd'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23999'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                        data-src="https://picsum.photos/300/200?random=11"
+                        alt="Галерея зображення 2"
+                        loading="lazy"
+                        class="lazy_image">
+                    <div class="galereya_overlay">
+                        <p>Зображення 2</p>
+                    </div>
+                </div>
+                
+                <div class="galereya_element" data-aos="fade-up" data-aos-delay="200">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23ddd'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23999'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                        data-src="https://picsum.photos/300/200?random=12"
+                        alt="Галерея зображення 3"
+                        loading="lazy"
+                        class="lazy_image">
+                    <div class="galereya_overlay">
+                        <p>Зображення 3</p>
+                    </div>
+                </div>
+                
+                <div class="galereya_element" data-aos="fade-up" data-aos-delay="300">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23ddd'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23999'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                        data-src="https://picsum.photos/300/200?random=13"
+                        alt="Галерея зображення 4"
+                        loading="lazy"
+                        class="lazy_image">
+                    <div class="galereya_overlay">
+                        <p>Зображення 4</p>
+                    </div>
+                </div>
+                
+                <div class="galereya_element" data-aos="fade-up" data-aos-delay="400">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23ddd'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23999'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                        data-src="https://picsum.photos/300/200?random=14"
+                        alt="Галерея зображення 5"
+                        loading="lazy"
+                        class="lazy_image">
+                    <div class="galereya_overlay">
+                        <p>Зображення 5</p>
+                    </div>
+                </div>
+                
+                <div class="galereya_element" data-aos="fade-up" data-aos-delay="500">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23ddd'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23999'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                        data-src="https://picsum.photos/300/200?random=15"
+                        alt="Галерея зображення 6"
+                        loading="lazy"
+                        class="lazy_image">
+                    <div class="galereya_overlay">
+                        <p>Зображення 6</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Прогресивне завантаження -->
+        <section class="progresyvne_sekciya">
+            <h2 class="zagolovok_sekcii">Прогресивне завантаження</h2>
+            
+            <div class="progressive_container">
+                <div class="progressive_image_wrapper">
+                    <img 
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f0f0f0'/%3E%3Cstop offset='100%25' stop-color='%23e0e0e0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' fill='%23999' font-size='18'%3EПрогресивне завантаження...%3C/text%3E%3C/svg%3E"
+                        data-src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80"
+                        data-src-lowres="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=50&q=10"
+                        alt="Приклад прогресивного завантаження"
+                        loading="lazy"
+                        class="progressive_image">
+                    <div class="loading_overlay">
+                        <div class="loading_spinner"></div>
+                    </div>
+                </div>
+                
+                <div class="karta_prykladu">
+                    <h4 class="podzagolovok">Етапи прогресивного завантаження:</h4>
+                    <ol class="numerovanyy_spysok">
+                        <li>Показ placeholder або низькоякісної версії</li>
+                        <li>Завантаження повноякісного зображення у фоні</li>
+                        <li>Плавна заміна на високоякісну версію</li>
+                        <li>Збереження в кеші для наступних відвідувань</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статистика оптимізації -->
+        <section class="statystyka_sekciya">
+            <h2 class="zagolovok_sekcii">Статистика оптимізації</h2>
+            
+            <div class="stats_container">
+                <div class="stat_card">
+                    <div class="stat_number" data-target="75">0</div>
+                    <div class="stat_label">% зменшення розміру з WebP</div>
+                </div>
+                
+                <div class="stat_card">
+                    <div class="stat_number" data-target="60">0</div>
+                    <div class="stat_label">% швидше завантаження</div>
+                </div>
+                
+                <div class="stat_card">
+                    <div class="stat_number" data-target="90">0</div>
+                    <div class="stat_label">% покращення Core Web Vitals</div>
+                </div>
+                
+                <div class="stat_card">
+                    <div class="stat_number" data-target="85">0</div>
+                    <div class="stat_label">% підтримки браузерів</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Технічні деталі -->
+        <section class="tekhnika_sekciya">
+            <h2 class="zagolovok_sekcii">Технічні рекомендації</h2>
+            
+            <div class="tech_grid">
+                <div class="tech_card">
+                    <h3 class="zagolovok_statti">🖼️ Формати зображень</h3>
+                    <ul class="markerovanyy_spysok">
+                        <li><strong>WebP:</strong> Для фотографій (підтримка 96% браузерів)</li>
+                        <li><strong>AVIF:</strong> Найкращий стиск (підтримка 86% браузерів)</li>
+                        <li><strong>JPEG:</strong> Fallback для фотографій</li>
+                        <li><strong>PNG:</strong> Для зображень з прозорістю</li>
+                        <li><strong>SVG:</strong> Для іконок та простих графічних елементів</li>
+                    </ul>
+                </div>
+                
+                <div class="tech_card">
+                    <h3 class="zagolovok_statti">⚡ Оптимізація швидкості</h3>
+                    <ul class="markerovanyy_spysok">
+                        <li><strong>Preload:</strong> Критичні зображення</li>
+                        <li><strong>Lazy loading:</strong> Відкладене завантаження</li>
+                        <li><strong>Responsive images:</strong> Правильні розміри</li>
+                        <li><strong>Compression:</strong> Оптимальна якість</li>
+                        <li><strong>CDN:</strong> Глобальне кешування</li>
+                    </ul>
+                </div>
+                
+                <div class="tech_card">
+                    <h3 class="zagolovok_statti">📱 Адаптивність</h3>
+                    <ul class="markerovanyy_spysok">
+                        <li><strong>Srcset:</strong> Різні розміри для різних екранів</li>
+                        <li><strong>Sizes:</strong> Вказівка розмірів відображення</li>
+                        <li><strong>Picture:</strong> Art direction</li>
+                        <li><strong>Media queries:</strong> Умовне завантаження</li>
+                        <li><strong>Density descriptors:</strong> Підтримка Retina</li>
+                    </ul>
+                </div>
+                
+                <div class="tech_card">
+                    <h3 class="zagolovok_statti">🚀 Core Web Vitals</h3>
+                    <ul class="markerovanyy_spysok">
+                        <li><strong>LCP:</strong> Швидке завантаження головного контенту</li>
+                        <li><strong>CLS:</strong> Стабільність макету</li>
+                        <li><strong>FID:</strong> Швидка інтерактивність</li>
+                        <li><strong>TTFB:</strong> Час до першого байту</li>
+                        <li><strong>FCP:</strong> Перша відрисовка контенту</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pidval_optimization" id="pageFooter">
+        <p>&copy; 2025 Лабораторна робота №8 - Оптимізація швидкості завантаження зображень</p>
+        <p class="malenkyi_tekst">Створено з використанням сучасних веб-технологій</p>
+    </footer>
+
+    <script src="image_optimization_script.js"></script>
+</body>
+</html>
