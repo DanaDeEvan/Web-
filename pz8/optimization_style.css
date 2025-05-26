@@ -1,0 +1,360 @@
+
+/* Основні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+
+.shapka_optimizacii {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 40px;
+    margin-bottom: 40px;
+}
+
+#main_title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+}
+
+.pidpys_shapky {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.konteiner_optimizacii {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.zagolovok_sekcii {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #34495e;
+    margin: 40px 0 25px;
+    text-align: center;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Інформація про формати */
+.info_formatov {
+    margin-bottom: 50px;
+}
+
+.grid_formatov {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.kartka_formatu {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartka_formatu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.kartka_formatu h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.kartka_formatu p {
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Галерея адаптивних зображень */
+.galereya_adaptyvna {
+    margin-bottom: 50px;
+}
+
+.konteyner_zobrazhen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.kartka_zobrazhennya {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartka_zobrazhennya:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.kartka_zobrazhennya h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.adaptyvne_zobrazhennya {
+    width: 100%;
+    display: block;
+}
+
+.responsyvne_zobrazhennya {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.kartka_zobrazhennya:hover .responsyvne_zobrazhennya {
+    transform: scale(1.05);
+}
+
+.opys_zobrazhennya {
+    padding: 15px 20px 20px;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* SVG іконки */
+.sekciya_ikonok {
+    margin-bottom: 50px;
+}
+
+.grid_ikonok {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blok_ikonky {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.blok_ikonky:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.ikonka {
+    width: 48px;
+    height: 48px;
+    fill: #3498db;
+    margin-bottom: 15px;
+    transition: fill 0.3s ease;
+}
+
+.blok_ikonky:hover .ikonka {
+    fill: white;
+}
+
+.blok_ikonky p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #34495e;
+    transition: color 0.3s ease;
+}
+
+.blok_ikonky:hover p {
+    color: white;
+}
+
+/* Техніки оптимізації */
+.sekciya_optimizacii {
+    margin-bottom: 50px;
+}
+
+.spysok_tekhnyk {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tekhnika_kartka {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tekhnika_kartka:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.tekhnika_kartka h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.tekhnika_kartka ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tekhnika_kartka li {
+    padding: 8px 0;
+    color: #34495e;
+    position: relative;
+    padding-left: 25px;
+}
+
+.tekhnika_kartka li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.tekhnika_kartka code {
+    background: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #e74c3c;
+    font-size: 0.9em;
+}
+
+/* Підвал */
+#pidpys_optimization {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0;
+    background-color: #34495e;
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+#pidpys_optimization p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Анімації завантаження */
+.responsyvne_zobrazhennya {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.responsyvne_zobrazhennya.loaded {
+    opacity: 1;
+}
+
+/* Lazy loading placeholder */
+.responsyvne_zobrazhennya[loading="lazy"] {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .konteiner_optimizacii {
+        padding: 0 15px;
+    }
+    
+    .shapka_optimizacii {
+        padding: 40px 15px 30px;
+    }
+    
+    .konteyner_zobrazhen {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .grid_formatov,
+    .spysok_tekhnyk {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .responsyvne_zobrazhennya {
+        height: 200px;
+    }
+    
+    .kartka_formatu,
+    .tekhnika_kartka {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid_ikonok {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .blok_ikonky {
+        padding: 15px;
+    }
+    
+    .ikonka {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Покращення продуктивності */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

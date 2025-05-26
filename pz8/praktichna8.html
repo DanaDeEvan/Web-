@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Практична робота №8</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="optimization_style.css">
+</head>
+<body>
+
+    <header class="shapka_optimizacii">
+        <h1 id="main_title">Оптимізація графічного контенту</h1>
+        <p class="pidpys_shapky">Ефективна робота з зображеннями для веб-сайтів</p>
+    </header>
+
+    <div class="konteiner_optimizacii">
+        
+        <section class="info_formatov">
+            <h2 class="zagolovok_sekcii">Використані формати та технології</h2>
+            <div class="grid_formatov">
+                <div class="kartka_formatu">
+                    <h3>JPEG</h3>
+                    <p>Для фотографій та зображень з багатьма кольорами</p>
+                </div>
+                <div class="kartka_formatu">
+                    <h3>PNG</h3>
+                    <p>Для зображень з прозорістю та графіки</p>
+                </div>
+                <div class="kartka_formatu">
+                    <h3>WebP</h3>
+                    <p>Сучасний формат з кращим стисненням</p>
+                </div>
+                <div class="kartka_formatu">
+                    <h3>SVG</h3>
+                    <p>Векторна графіка для іконок та логотипів</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="galereya_adaptyvna">
+            <h2 class="zagolovok_sekcii">Адаптивні зображення</h2>
+            
+            <div class="konteyner_zobrazhen">
+                <article class="kartka_zobrazhennya">
+                    <h3>Пейзаж з WebP підтримкою</h3>
+                    <picture class="adaptyvne_zobrazhennya">
+                        <source 
+                            srcset="https://picsum.photos/640/360?random=1 640w,
+                                    https://picsum.photos/1280/720?random=1 1280w,
+                                    https://picsum.photos/1920/1080?random=1 1920w"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 1920px"
+                            type="image/webp">
+                        <img src="https://picsum.photos/800/450?random=1" 
+                             alt="Красивий пейзаж з горами та озером" 
+                             loading="lazy"
+                             class="responsyvne_zobrazhennya">
+                    </picture>
+                    <p class="opys_zobrazhennya">Адаптивне зображення з різними розмірами для різних пристроїв</p>
+                </article>
+
+                <article class="kartka_zobrazhennya">
+                    <h3>Міський пейзаж</h3>
+                    <picture class="adaptyvne_zobrazhennya">
+                        <source 
+                            srcset="https://picsum.photos/640/360?random=2 640w,
+                                    https://picsum.photos/1280/720?random=2 1280w,
+                                    https://picsum.photos/1920/1080?random=2 1920w"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 1920px"
+                            type="image/webp">
+                        <img src="https://picsum.photos/800/450?random=2" 
+                             alt="Сучасний міський пейзаж" 
+                             loading="lazy"
+                             class="responsyvne_zobrazhennya">
+                    </picture>
+                    <p class="opys_zobrazhennya">Lazy loading забезпечує швидке завантаження сторінки</p>
+                </article>
+
+                <article class="kartka_zobrazhennya">
+                    <h3>Природа та архітектура</h3>
+                    <picture class="adaptyvne_zobrazhennya">
+                        <source 
+                            srcset="https://picsum.photos/640/360?random=3 640w,
+                                    https://picsum.photos/1280/720?random=3 1280w,
+                                    https://picsum.photos/1920/1080?random=3 1920w"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 1920px"
+                            type="image/webp">
+                        <img src="https://picsum.photos/800/450?random=3" 
+                             alt="Поєднання природи та архітектури" 
+                             loading="lazy"
+                             class="responsyvne_zobrazhennya">
+                    </picture>
+                    <p class="opys_zobrazhennya">Оптимізовані розміри файлів для швидкого завантаження</p>
+                </article>
+
+                <article class="kartka_zobrazhennya">
+                    <h3>Абстрактне мистецтво</h3>
+                    <picture class="adaptyvne_zobrazhennya">
+                        <source 
+                            srcset="https://picsum.photos/640/360?random=4 640w,
+                                    https://picsum.photos/1280/720?random=4 1280w,
+                                    https://picsum.photos/1920/1080?random=4 1920w"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 1920px"
+                            type="image/webp">
+                        <img src="https://picsum.photos/800/450?random=4" 
+                             alt="Абстрактні форми та кольори" 
+                             loading="lazy"
+                             class="responsyvne_zobrazhennya">
+                    </picture>
+                    <p class="opys_zobrazhennya">Підтримка Retina дисплеїв з високою щільністю пікселів</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="sekciya_ikonok">
+            <h2 class="zagolovok_sekcii">SVG іконки та спрайти</h2>
+            
+            <!-- SVG спрайт -->
+            <svg class="svg_sprayt" style="display: none;">
+                <defs>
+                    <symbol id="icon-home" viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                    </symbol>
+                    <symbol id="icon-heart" viewBox="0 0 24 24">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </symbol>
+                    <symbol id="icon-star" viewBox="0 0 24 24">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </symbol>
+                    <symbol id="icon-download" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7,10 12,15 17,10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </symbol>
+                    <symbol id="icon-settings" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </symbol>
+                </defs>
+            </svg>
+
+            <div class="grid_ikonok">
+                <div class="blok_ikonky">
+                    <svg class="ikonka" aria-label="Домашня сторінка">
+                        <use href="#icon-home"></use>
+                    </svg>
+                    <p>Головна</p>
+                </div>
+                <div class="blok_ikonky">
+                    <svg class="ikonka" aria-label="Вподобайки">
+                        <use href="#icon-heart"></use>
+                    </svg>
+                    <p>Улюблені</p>
+                </div>
+                <div class="blok_ikonky">
+                    <svg class="ikonka" aria-label="Рейтинг">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <p>Рейтинг</p>
+                </div>
+                <div class="blok_ikonky">
+                    <svg class="ikonka" aria-label="Завантаження">
+                        <use href="#icon-download"></use>
+                    </svg>
+                    <p>Скачати</p>
+                </div>
+                <div class="blok_ikonky">
+                    <svg class="ikonka" aria-label="Налаштування">
+                        <use href="#icon-settings"></use>
+                    </svg>
+                    <p>Настройки</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekciya_optimizacii">
+            <h2 class="zagolovok_sekcii">Техніки оптимізації</h2>
+            <div class="spysok_tekhnyk">
+                <div class="tekhnika_kartka">
+                    <h3>📱 Адаптивні зображення</h3>
+                    <ul>
+                        <li>Використання тегу <code>&lt;picture&gt;</code></li>
+                        <li>Атрибут <code>srcset</code> для різних розмірів</li>
+                        <li>Атрибут <code>sizes</code> для медіа-запитів</li>
+                    </ul>
+                </div>
+                <div class="tekhnika_kartka">
+                    <h3>⚡ Lazy Loading</h3>
+                    <ul>
+                        <li>Атрибут <code>loading="lazy"</code></li>
+                        <li>Завантаження тільки видимих зображень</li>
+                        <li>Покращення швидкості завантаження сторінки</li>
+                    </ul>
+                </div>
+                <div class="tekhnika_kartka">
+                    <h3>🗜️ Стиснення файлів</h3>
+                    <ul>
+                        <li>WebP формат з меншим розміром</li>
+                        <li>Fallback до JPEG/PNG</li>
+                        <li>Оптимізовані SVG іконки</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer id="pidpys_optimization">
+        <p>Зроблено з кавою :)</p>
+    </footer>
+
+    <script src="optimization_script.js"></script>
+</body>
+</html>
