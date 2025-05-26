@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №9 - Покращення продуктивності веб-сторінки">
+    <meta name="keywords" content="HTML, CSS, JavaScript, оптимізація, продуктивність, лабораторна">
+    <title>Лабораторна робота №9 - Оптимізація продуктивності</title>
+    
+    <!-- Google Fonts: сторонній ресурс -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Критичний CSS вбудований -->
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .shapka_optimizatsii {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+        }
+        #main_title {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .pidpys_shapky {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+    </style>
+
+    <!-- Відкладене завантаження CSS (два файли) -->
+    <link rel="preload" href="performance_styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="performance_styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="performance_styles.css">
+        <link rel="stylesheet" href="performance_styles.min.css">
+    </noscript>
+</head>
+<body>
+
+    <header class="shapka_optimizatsii" id="pageHeader">
+        <h1 id="main_title">Оптимізація продуктивності</h1>
+        <p class="pidpys_shapky">Лабораторна робота №9</p>
+    </header>
+
+    <main id="osnovnyi_zmist" class="main_content_wrapper">
+        
+        <section class="vstup_sekciya">
+            <h2 class="zagolovok_sekcii">Методи оптимізації</h2>
+            <p class="osnovnyi_tekst">Дана лабораторна робота демонструє основні методи оптимізації продуктивності веб-сторінки.</p>
+        </section>
+
+        <section class="css_optimizatsiya_sekciya">
+            <h2 class="zagolovok_sekcii">CSS оптимізація</h2>
+            <div class="kontent_sekcii">
+                <p>Критичний CSS вбудовано в HTML для швидшого рендерингу.</p>
+                <p>Некритичний CSS завантажується асинхронно.</p>
+            </div>
+        </section>
+
+        <section class="js_optimizatsiya_sekciya">
+            <h2 class="zagolovok_sekcii">JavaScript оптимізація</h2>
+            <div class="kontent_sekcii">
+                <p>Скрипти завантажуються з атрибутами async та defer.</p>
+                <button id="testBtn" class="test_button">Тестова кнопка</button>
+            </div>
+        </section>
+
+        <section class="zobrazhennya_sekciya">
+            <h2 class="zagolovok_sekcii">Оптимізація зображень</h2>
+            <div class="galereya_optimizovana">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23ddd' width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                     data-src="https://picsum.photos/300/200?random=1"
+                     loading="lazy"
+                     alt="Оптимізоване зображення 1"
+                     class="lazy_image">
+                
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23ddd' width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EЗавантаження...%3C/text%3E%3C/svg%3E"
+                     data-src="https://picsum.photos/300/200?random=2"
+                     loading="lazy"
+                     alt="Оптимізоване зображення 2"
+                     class="lazy_image">
+            </div>
+        </section>
+
+        <section class="keshuvannya_sekciya">
+            <h2 class="zagolovok_sekcii">Кешування</h2>
+            <div class="kontent_sekcii">
+                <p>Ресурси кешуються в браузері для швидшого повторного завантаження.</p>
+                <div id="cacheInfo" class="cache_info"></div>
+            </div>
+        </section>
+
+        <section class="metriky_sekciya">
+            <h2 class="zagolovok_sekcii">Метрики продуктивності</h2>
+            <div class="performance_metrics">
+                <div class="metric_item">
+                    <span class="metric_label">Час завантаження DOM:</span>
+                    <span id="domTime" class="metric_value">-</span>
+                </div>
+                <div class="metric_item">
+                    <span class="metric_label">Час повного завантаження:</span>
+                    <span id="loadTime" class="metric_value">-</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="pidpys_lab9" class="pidpys_footer">
+        <p>&copy; 2025 Лабораторна робота №9. Оптимізація продуктивності.</p>
+    </footer>
+
+    <script src="performance_script.js" async defer></script>
+
+</body>
+</html>
