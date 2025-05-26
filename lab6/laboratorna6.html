@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №6 - Реалізація функціоналу фільтрації та сортування">
+    <meta name="keywords" content="HTML, JavaScript, фільтрація, сортування, лабораторна">
+    <title>Лабораторна робота №6</title>
+    <link rel="stylesheet" href="filter_styles.css">
+</head>
+<body>
+
+    <header class="shapka_lab" id="pageHeader">
+        <h1 id="main_title">Фільтрація та сортування даних</h1>
+        <p class="pidpys_shapky">Лабораторна робота №6</p>
+    </header>
+
+    <main id="osnovnyi_zmist" class="main_content_wrapper">
+        
+        <section class="panel_filtiv" id="filterPanel">
+            <h2>Панель фільтрів</h2>
+            
+            <div class="grupa_filtiv">
+                <div class="filter_item">
+                    <label for="searchInput">Пошук товарів:</label>
+                    <input type="text" id="searchInput" placeholder="Введіть назву товару..." class="pole_poshuku">
+                </div>
+                
+                <div class="filter_item">
+                    <label for="categoryFilter">Категорія:</label>
+                    <select id="categoryFilter" class="vypadayuchyy_spysok">
+                        <option value="">Всі категорії</option>
+                        <option value="electronics">Електроніка</option>
+                        <option value="clothing">Одяг</option>
+                        <option value="books">Книги</option>
+                        <option value="home">Дім і сад</option>
+                    </select>
+                </div>
+                
+                <div class="filter_item">
+                    <label for="priceRange">Діапазон цін:</label>
+                    <div class="price_range_container">
+                        <input type="number" id="minPrice" placeholder="Від" min="0" class="price_input">
+                        <span>-</span>
+                        <input type="number" id="maxPrice" placeholder="До" min="0" class="price_input">
+                    </div>
+                </div>
+                
+                <div class="filter_item">
+                    <label for="ratingFilter">Мінімальний рейтинг:</label>
+                    <select id="ratingFilter" class="vypadayuchyy_spysok">
+                        <option value="">Будь-який</option>
+                        <option value="5">5 зірок</option>
+                        <option value="4">4+ зірки</option>
+                        <option value="3">3+ зірки</option>
+                        <option value="2">2+ зірки</option>
+                    </select>
+                </div>
+                
+                <div class="filter_item">
+                    <label>Наявність:</label>
+                    <div class="checkbox_grupa">
+                        <label class="checkbox_label">
+                            <input type="checkbox" id="inStockOnly" class="checkbox_input">
+                            Тільки в наявності
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel_sortyu">
+                <label for="sortSelect">Сортувати за:</label>
+                <select id="sortSelect" class="vypadayuchyy_spysok">
+                    <option value="name_asc">Назва (А-Я)</option>
+                    <option value="name_desc">Назва (Я-А)</option>
+                    <option value="price_asc">Ціна (дешевші спочатку)</option>
+                    <option value="price_desc">Ціна (дорожчі спочатку)</option>
+                    <option value="rating_desc">Рейтинг (кращі спочатку)</option>
+                    <option value="rating_asc">Рейтинг (гірші спочатку)</option>
+                </select>
+                
+                <button id="applyFilters" class="knopka_zastosuvannya">Застосувати фільтри</button>
+                <button id="resetFilters" class="knopka_skydannya">Скинути все</button>
+            </div>
+        </section>
+
+        <section class="informaciya_filtiv" id="filterInfo">
+            <div class="aktyvni_filtry" id="activeFilters">
+                <span class="label_filtiv">Активні фільтри:</span>
+                <div id="filterTags" class="konteyner_tegiv"></div>
+            </div>
+            
+            <div class="rezultaty_poshuku">
+                <span id="resultsCount">Знайдено: 0 товарів</span>
+            </div>
+        </section>
+
+        <section class="konteiner_tovariv" id="itemsContainer">
+            <div id="productsGrid" class="grid_tovariv">
+                <!-- Товари будуть додані через JavaScript -->
+            </div>
+            
+            <div id="noResults" class="povidomlennya_pustoty hidden">
+                <h3>Товарів не знайдено</h3>
+                <p>Спробуйте змінити параметри фільтрації</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pidval_lab" id="pageFooter">
+        <p>Зроблено з кавою :)</p>
+    </footer>
+
+    <script src="filter_script.js"></script>
+</body>
+</html>

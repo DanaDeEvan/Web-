@@ -1,0 +1,405 @@
+/* Основні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.shapka_lab {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#main_title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.pidpys_shapky {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.main_content_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Панель фільтрів */
+.panel_filtiv {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border: 1px solid #e1e8ed;
+}
+
+.panel_filtiv h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+.grupa_filtiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.filter_item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter_item label {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.pole_poshuku,
+.vypadayuchyy_spysok,
+.price_input {
+    padding: 10px 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #fafbfc;
+}
+
+.pole_poshuku:focus,
+.vypadayuchyy_spysok:focus,
+.price_input:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.price_range_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price_input {
+    flex: 1;
+    min-width: 0;
+}
+
+.checkbox_grupa {
+    margin-top: 5px;
+}
+
+.checkbox_label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox_input {
+    width: 18px;
+    height: 18px;
+    accent-color: #3498db;
+}
+
+/* Панель сортування */
+.panel_sortyu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e8ed;
+    flex-wrap: wrap;
+}
+
+.panel_sortyu label {
+    font-weight: 500;
+    color: #2c3e50;
+    white-space: nowrap;
+}
+
+.knopka_zastosuvannya,
+.knopka_skydannya {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.knopka_zastosuvannya {
+    background-color: #3498db;
+    color: white;
+}
+
+.knopka_zastosuvannya:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.knopka_skydannya {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.knopka_skydannya:hover {
+    background-color: #7f8c8d;
+}
+
+/* Інформація про фільтри */
+.informaciya_filtiv {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.aktyvni_filtry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.label_filtiv {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.konteyner_tegiv {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter_tag {
+    background-color: #3498db;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter_tag .remove_tag {
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.filter_tag .remove_tag:hover {
+    opacity: 1;
+}
+
+.rezultaty_poshuku {
+    font-weight: 500;
+    color: #7f8c8d;
+}
+
+/* Контейнер товарів */
+.konteiner_tovariv {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.grid_tovariv {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.kartka_tovaru {
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #fafbfc;
+    position: relative;
+}
+
+.kartka_tovaru:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-color: #3498db;
+}
+
+.zobrazhennya_tovaru {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.informaciya_tovaru {
+    padding: 15px;
+}
+
+.nazva_tovaru {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.kategoriya_tovaru {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.cina_tovaru {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.reytyng_tovaru {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.zirky {
+    color: #f39c12;
+}
+
+.znachennya_reytyngu {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.status_tovaru {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.status_tovaru.in-stock {
+    background-color: #d5f4e6;
+    color: #27ae60;
+}
+
+.status_tovaru.out-of-stock {
+    background-color: #fadbd8;
+    color: #e74c3c;
+}
+
+/* Повідомлення про відсутність результатів */
+.povidomlennya_pustoty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #7f8c8d;
+}
+
+.povidomlennya_pustoty h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #95a5a6;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Футер */
+.pidval_lab {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #e1e8ed;
+    color: #7f8c8d;
+    background-color: white;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .main_content_wrapper {
+        padding: 15px;
+    }
+    
+    #main_title {
+        font-size: 2rem;
+    }
+    
+    .grupa_filtiv {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .panel_sortyu {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .informaciya_filtiv {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .grid_tovariv {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .price_range_container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid_tovariv {
+        grid-template-columns: 1fr;
+    }
+    
+    .kartka_tovaru {
+        max-width: none;
+    }
+}
