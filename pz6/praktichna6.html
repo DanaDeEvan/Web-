@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Практична робота №6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="api_style.css">
+</head>
+<body>
+
+    <h1 id="main_title">Робота з API та отримання даних</h1>
+
+    <div class="info_api">
+        <p><strong>Використане API:</strong> JSONPlaceholder - <a href="https://jsonplaceholder.typicode.com/users" target="_blank">https://jsonplaceholder.typicode.com/users</a></p>
+        <p><strong>Опис:</strong> Безкоштовний REST API для тестування з фіктивними даними користувачів</p>
+    </div>
+
+    <div class="konteiner_api" id="apiContainer">
+        <div class="panel_upravlinnya">
+            <input type="text" id="poshuk_input" placeholder="Пошук користувачів..." class="pole_poshuku">
+            <button id="poshuk_knopka" class="knopka_poshuku">Пошукати</button>
+            <button id="ochistyty_knopka" class="knopka_ochystyty">Очистити</button>
+        </div>
+
+        <div id="loader" class="zagruzka hidden">
+            <div class="spinner"></div>
+            <p>Завантаження даних...</p>
+        </div>
+
+        <div id="error_message" class="povidomlennya_pomylky hidden">
+        </div>
+
+        <div id="data_container" class="konteiner_danykh">
+        </div>
+
+        <div class="paginaciya" id="pagination">
+            <button id="prev_btn" class="knopka_pag" disabled>Попередня</button>
+            <span id="page_info" class="info_storinky">Сторінка 1</span>
+            <button id="next_btn" class="knopka_pag">Наступна</button>
+        </div>
+    </div>
+
+    <footer id="pidpys_api">
+        <p>Зроблено з кавою :)</p>
+    </footer>
+
+    <script src="api_script.js"></script>
+</body>
+</html>
