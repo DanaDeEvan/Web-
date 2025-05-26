@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №7 - Створення адаптивного дизайну з правильною типографікою">
+    <meta name="keywords" content="HTML, CSS, адаптивний дизайн, типографіка, лабораторна">
+    <title>Лабораторна робота №7</title>
+    <link rel="stylesheet" href="adaptive_styles.css">
+</head>
+<body>
+
+    <header class="shapka_adaptive" id="pageHeader">
+        <h1 id="main_title">Адаптивний дизайн та типографіка</h1>
+        <p class="pidpys_shapky">Лабораторна робота №7</p>
+    </header>
+
+    <main id="osnovnyi_zmist" class="main_content_wrapper">
+        
+        <section class="vstup_sekciya">
+            <h2 class="zagolovok_sekcii">Вступ до адаптивної типографіки</h2>
+            <p class="osnovnyi_tekst">
+                Адаптивна типографіка є одним з найважливіших аспектів сучасного веб-дизайну. 
+                Вона забезпечує <strong>зручність читання</strong> на різних пристроях та екранах.
+            </p>
+            <p class="osnovnyi_tekst">
+                Правильно налаштована типографіка включає в себе розміри шрифтів, 
+                міжрядкові інтервали, довжину рядків та <em>контрастність тексту</em>.
+            </p>
+        </section>
+
+        <section class="pryklady_sekciya">
+            <h2 class="zagolovok_sekcii">Приклади типографічних елементів</h2>
+            
+            <article class="stattya">
+                <h3 class="zagolovok_statti">Заголовок третього рівня</h3>
+                <p class="osnovnyi_tekst">
+                    Це приклад основного тексту з оптимальним розміром шрифта та міжрядковим інтервалом.
+                    Довжина рядка обмежена для зручності читання.
+                </p>
+                
+                <h4 class="podzagolovok">Підзаголовок четвертого рівня</h4>
+                <p class="osnovnyi_tekst">
+                    Ієрархія заголовків допомагає структурувати контент та полегшує навігацію по тексту.
+                    Кожен рівень має свій розмір та вагу шрифта.
+                </p>
+            </article>
+
+            <blockquote class="tsytata">
+                <p>"Типографіка - це мистецтво розташування тексту таким чином, 
+                щоб зробити письмову мову зрозумілою, читабельною та красивою."</p>
+                <cite>— Роберт Брінгхерст</cite>
+            </blockquote>
+
+            <h3 class="zagolovok_statti">Списки та структура</h3>
+            
+            <h4 class="podzagolovok">Принципи адаптивної типографіки:</h4>
+            <ol class="numerovanyy_spysok">
+                <li>Масштабування шрифтів відповідно до розміру екрана</li>
+                <li>Підтримка вертикального ритму тексту</li>
+                <li>Оптимізація довжини рядків (45-75 символів)</li>
+                <li>Забезпечення достатньої контрастності</li>
+            </ol>
+
+            <h4 class="podzagolovok">Технології, що використовуються:</h4>
+            <ul class="markerovanyy_spysok">
+                <li>CSS Media Queries</li>
+                <li>Fluid Typography (clamp, vw)</li>
+                <li>Модульні шкали шрифтів</li>
+                <li>Responsive Units (rem, em)</li>
+            </ul>
+        </section>
+
+        <section class="tablytsia_sekciya">
+            <h2 class="zagolovok_sekcii">Розміри шрифтів для різних пристроїв</h2>
+            
+            <div class="konteyner_tablytsi">
+                <table class="adaptyvna_tablytsia">
+                    <thead>
+                        <tr>
+                            <th>Елемент</th>
+                            <th>Мобільні<br>(< 768px)</th>
+                            <th>Планшети<br>(768px - 1200px)</th>
+                            <th>Десктоп<br>(> 1200px)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>H1</td>
+                            <td>1.8rem</td>
+                            <td>2.2rem</td>
+                            <td>2.5rem</td>
+                        </tr>
+                        <tr>
+                            <td>H2</td>
+                            <td>1.5rem</td>
+                            <td>1.8rem</td>
+                            <td>2rem</td>
+                        </tr>
+                        <tr>
+                            <td>H3</td>
+                            <td>1.3rem</td>
+                            <td>1.5rem</td>
+                            <td>1.6rem</td>
+                        </tr>
+                        <tr>
+                            <td>Body</td>
+                            <td>0.9rem</td>
+                            <td>1rem</td>
+                            <td>1.1rem</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="pryklady_tekstu">
+            <h2 class="zagolovok_sekcii">Демонстрація адаптивності</h2>
+            
+            <div class="karta_prykladu">
+                <h3 class="zagolovok_statti">Текст з різними виділеннями</h3>
+                <p class="osnovnyi_tekst">
+                    У цьому абзаці ми демонструємо різні способи виділення тексту: 
+                    <strong>жирний текст</strong>, <em>курсивний текст</em>, 
+                    <mark>виділений текст</mark> та <code>код</code>.
+                </p>
+                
+                <p class="malenkyi_tekst">
+                    Це приклад меншого тексту, який використовується для додаткової інформації 
+                    або підписів до зображень.
+                </p>
+                
+                <p class="velikyi_tekst">
+                    А це приклад більшого тексту для акцентування уваги на важливій інформації.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pidval_adaptive" id="pageFooter">
+        <p>Зроблено з кавою :)</p>
+    </footer>
+
+</body>
+</html>
