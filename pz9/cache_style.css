@@ -1,0 +1,404 @@
+/* Основні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 25px;
+    background-color: #f0f8ff;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+#main_title {
+    color: #1f4e79;
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.dark-theme #main_title {
+    color: #4a9eff;
+    border-bottom-color: #4a9eff;
+}
+
+.info_cache {
+    background-color: #e8f4fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 4px solid #3498db;
+}
+
+.dark-theme .info_cache {
+    background-color: #2a2a2a;
+    border-left-color: #4a9eff;
+}
+
+.konteiner_cache {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Секції */
+section {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dark-theme section {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+}
+
+.dark-theme section h2 {
+    color: #4a9eff;
+    border-bottom-color: #444;
+}
+
+/* Форма */
+.forma_danykh {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.dark-theme .forma_danykh {
+    background-color: #333;
+    border-color: #555;
+}
+
+.grupa_polya {
+    margin-bottom: 15px;
+}
+
+.grupa_polya label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.dark-theme .grupa_polya label {
+    color: #bbb;
+}
+
+.grupa_polya input,
+.grupa_polya select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.dark-theme .grupa_polya input,
+.dark-theme .grupa_polya select {
+    background-color: #444;
+    border-color: #666;
+    color: #e0e0e0;
+}
+
+.grupa_polya input:focus,
+.grupa_polya select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#clearBtn, #clearCache {
+    background-color: #e74c3c;
+}
+
+#clearBtn:hover, #clearCache:hover {
+    background-color: #c0392b;
+}
+
+/* Галерея */
+.konteiner_zobrazhen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.kartka_zobrazhennya {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-theme .kartka_zobrazhennya {
+    border-color: #555;
+}
+
+.kartka_zobrazhennya:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.placeholder {
+    height: 200px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.dark-theme .placeholder {
+    background-color: #444;
+    color: #bbb;
+}
+
+.kartka_zobrazhennya img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.kartka_zobrazhennya h3 {
+    padding: 10px;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+.dark-theme .kartka_zobrazhennya h3 {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Динамічний контент */
+.panel_upravlinnya {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 200px;
+}
+
+.zagruzka {
+    text-align: center;
+    padding: 40px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+.povidomlennya_pomylky {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 20px;
+}
+
+.dark-theme .povidomlennya_pomylky {
+    background-color: #3d1a1a;
+    color: #ff6b6b;
+    border-color: #5a1a1a;
+}
+
+.konteiner_danykh {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.kartka_korystuvacha {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.dark-theme .kartka_korystuvacha {
+    background-color: #333;
+    border-color: #555;
+}
+
+.kartka_korystuvacha:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Налаштування */
+.settings_panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.setting_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting_item label {
+    min-width: 140px;
+    font-weight: 500;
+}
+
+.setting_item input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.setting_item input[type="number"],
+.setting_item select {
+    flex: 1;
+}
+
+/* Статистика */
+.stats_panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+}
+
+.dark-theme .stat_item {
+    background-color: #333;
+    border-left-color: #4a9eff;
+}
+
+.stat_label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.dark-theme .stat_label {
+    color: #bbb;
+}
+
+.stat_item span:last-child {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.dark-theme .stat_item span:last-child {
+    color: #4a9eff;
+}
+
+/* Футер */
+#pidpys_cache {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 2px solid #ecf0f1;
+    color: #7f8c8d;
+}
+
+.dark-theme #pidpys_cache {
+    border-top-color: #444;
+    color: #bbb;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .panel_upravlinnya {
+        flex-direction: column;
+    }
+    
+    #searchInput {
+        min-width: 100%;
+    }
+    
+    .konteiner_zobrazhen {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .settings_panel {
+        grid-template-columns: 1fr;
+    }
+    
+    .setting_item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .setting_item label {
+        min-width: auto;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Практична робота №9</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cache_style.css">
+</head>
+<body>
+
+    <h1 id="main_title">Кешування та стиснення веб-ресурсів</h1>
+
+    <div class="info_cache">
+        <p><strong>Мета:</strong> Навчитися оптимізувати веб-сайт за допомогою базових технік кешування та стиснення на стороні клієнта</p>
+    </div>
+
+    <div class="konteiner_cache" id="cacheContainer">
+        
+        <section class="forma_danykh">
+            <h2>Форма для збереження даних</h2>
+            <form id="userForm">
+                <div class="grupa_polya">
+                    <label for="username">Ім'я користувача:</label>
+                    <input type="text" id="username" name="username" placeholder="Введіть ваше ім'я">
+                </div>
+                
+                <div class="grupa_polya">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Введіть ваш email">
+                </div>
+                
+                <div class="grupa_polya">
+                    <label for="preferences">Налаштування теми:</label>
+                    <select id="preferences" name="preferences">
+                        <option value="light">Світла тема</option>
+                        <option value="dark">Темна тема</option>
+                        <option value="auto">Автоматично</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="saveBtn">Зберегти дані</button>
+                <button type="button" id="clearBtn">Очистити дані</button>
+            </form>
+        </section>
+
+        <section class="galereya_cache">
+            <h2>Галерея з кешуванням</h2>
+            <div class="konteiner_zobrazhen" id="imageContainer">
+                <div class="kartka_zobrazhennya" data-url="https://picsum.photos/300/200?random=1">
+                    <div class="placeholder">Завантаження...</div>
+                    <h3>Зображення 1</h3>
+                </div>
+                <div class="kartka_zobrazhennya" data-url="https://picsum.photos/300/200?random=2">
+                    <div class="placeholder">Завантаження...</div>
+                    <h3>Зображення 2</h3>
+                </div>
+                <div class="kartka_zobrazhennya" data-url="https://picsum.photos/300/200?random=3">
+                    <div class="placeholder">Завантаження...</div>
+                    <h3>Зображення 3</h3>
+                </div>
+                <div class="kartka_zobrazhennya" data-url="https://picsum.photos/300/200?random=4">
+                    <div class="placeholder">Завантаження...</div>
+                    <h3>Зображення 4</h3>
+                </div>
+            </div>
+            <button id="loadImages">Завантажити зображення</button>
+            <button id="clearCache">Очистити кеш зображень</button>
+        </section>
+
+        <section class="dynamichnyy_kontent">
+            <h2>Динамічний контент</h2>
+            <div class="panel_upravlinnya">
+                <input type="text" id="searchInput" placeholder="Пошук користувачів...">
+                <button id="searchBtn">Пошук</button>
+                <button id="refreshBtn">Оновити</button>
+            </div>
+            
+            <div id="loader" class="zagruzka hidden">
+                <div class="spinner"></div>
+                <p>Завантаження даних...</p>
+            </div>
+            
+            <div id="error_message" class="povidomlennya_pomylky hidden">
+                <p>Помилка завантаження даних</p>
+            </div>
+            
+            <div id="data_container" class="konteiner_danykh">
+                <!-- Динамічний контент буде додано через JavaScript -->
+            </div>
+        </section>
+
+        <section class="nalashtuvannya_korystuvacha">
+            <h2>Налаштування користувача</h2>
+            <div class="settings_panel">
+                <div class="setting_item">
+                    <label for="autoSave">Автозбереження:</label>
+                    <input type="checkbox" id="autoSave" name="autoSave">
+                </div>
+                
+                <div class="setting_item">
+                    <label for="cacheExpiry">Час кешування (хвилини):</label>
+                    <input type="number" id="cacheExpiry" name="cacheExpiry" min="1" max="60" value="5">
+                </div>
+                
+                <div class="setting_item">
+                    <label for="compressionLevel">Рівень стиснення:</label>
+                    <select id="compressionLevel" name="compressionLevel">
+                        <option value="low">Низький</option>
+                        <option value="medium">Середній</option>
+                        <option value="high">Високий</option>
+                    </select>
+                </div>
+                
+                <button id="saveSettings">Зберегти налаштування</button>
+            </div>
+        </section>
+
+        <section class="statistyka_cache">
+            <h2>Статистика кешування</h2>
+            <div class="stats_panel">
+                <div class="stat_item">
+                    <span class="stat_label">Розмір localStorage:</span>
+                    <span id="localStorageSize">0 KB</span>
+                </div>
+                <div class="stat_item">
+                    <span class="stat_label">Кешованих зображень:</span>
+                    <span id="cachedImages">0</span>
+                </div>
+                <div class="stat_item">
+                    <span class="stat_label">Кешованих запитів:</span>
+                    <span id="cachedRequests">0</span>
+                </div>
+                <div class="stat_item">
+                    <span class="stat_label">Останнє оновлення:</span>
+                    <span id="lastUpdate">Ніколи</span>
+                </div>
+            </div>
+            <button id="updateStats">Оновити статистику</button>
+        </section>
+
+    </div>
+
+    <footer id="pidpys_cache">
+        <p>Зроблено з кавою :)</p>
+    </footer>
+
+    <script src="cache_script.js"></script>
+</body>
+</html>
